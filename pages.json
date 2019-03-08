@@ -2,6 +2,24 @@
     "pages" : [
         // pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
         {
+            "path" : "pages/tabBar/home/home",
+            "style" : {
+                "navigationBarTitleText" : "首页",
+                "app-plus" : {
+                    "titleNView" : {
+                        "buttons" : [
+                            {
+                                "text" : "\ue534",
+                                "fontSrc" : "/static/uni.ttf",
+                                "fontSize" : "22px",
+                                "color" : "#999999"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
             "path" : "pages/tabBar/component/component",
             "style" : {
                 "navigationBarTitleText" : "组件",
@@ -903,7 +921,7 @@
     ],
     "globalStyle" : {
         "navigationBarTextStyle" : "black",
-        "navigationBarTitleText" : "Hello uniapp",
+        "navigationBarTitleText" : "油信宝",
         "navigationBarBackgroundColor" : "#F8F8F8",
         "backgroundColor" : "#F8F8F8",
         "mp-alipay" : {
@@ -912,10 +930,16 @@
     },
     "tabBar" : {
         "color" : "#7A7E83",
-        "selectedColor" : "#007AFF",
+        "selectedColor" : "#ff8200",
         "borderStyle" : "black",
         "backgroundColor" : "#F8F8F8",
         "list" : [
+            {
+                "pagePath" : "pages/tabBar/home/home",
+                "iconPath" : "static/navIcon/tab_icon_wode_shouye.png",
+                "selectedIconPath" : "static/navIcon/tab_icon_shouye.png",
+                "text" : "首页"
+            },
             {
                 "pagePath" : "pages/tabBar/component/component",
                 "iconPath" : "static/component.png",
