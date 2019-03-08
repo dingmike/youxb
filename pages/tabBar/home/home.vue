@@ -53,8 +53,8 @@
         </view>
 
         <view class="uni-flex uni-row own-bg-white own-card-padding">
-            <view class="uni-flex uni-column">
-                <image src="../../../static/banner/content_banner_shouchong.png" style="width: 324upx;height: 316upx;"></image>
+            <view class="uni-flex uni-column" style="width: 50%;">
+                <image src="../../../static/banner/content_banner_shouchong.png" style="width: 324upx;height: 322upx;"></image>
             </view>
             <view class="uni-flex uni-column">
                 <view class="uni-flex uni-row">
