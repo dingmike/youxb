@@ -20,6 +20,41 @@
             }
         },
         {
+            "path" : "pages/tabBar/gasCard/gasCard",
+            "style" : {
+                "navigationBarTitleText" : "我的油卡",
+                "app-plus" : {
+                    "titleNView" : {
+                        "buttons" : [
+                            {
+                                "text" : "\ue534",
+                                "fontSrc" : "/static/uni.ttf",
+                                "fontSize" : "22px",
+                                "color" : "#999999"
+                            }
+                        ]
+                    }
+                }
+            }
+        }, {
+            "path" : "pages/tabBar/personCenter/personCenter",
+            "style" : {
+                "navigationBarTitleText" : "个人中心",
+                "app-plus" : {
+                    "titleNView" : {
+                        "buttons" : [
+                            {
+                                "text" : "\ue534",
+                                "fontSrc" : "/static/uni.ttf",
+                                "fontSize" : "22px",
+                                "color" : "#999999"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
             "path" : "pages/tabBar/component/component",
             "style" : {
                 "navigationBarTitleText" : "组件",
@@ -945,6 +980,17 @@
                 "iconPath" : "static/component.png",
                 "selectedIconPath" : "static/componentHL.png",
                 "text" : "组件"
+            },
+            {
+                "pagePath" : "pages/tabBar/gasCard/gasCard",
+                "iconPath" : "static/navIcon/tab_icon_youka.png",
+                "selectedIconPath" : "static/navIcon/tab_icon_bang_youka.png",
+                "text" : "油卡"
+            }, {
+                "pagePath" : "pages/tabBar/personCenter/personCenter",
+                "iconPath" : "static/navIcon/tab_icon_wode.png",
+                "selectedIconPath" : "static/navIcon/tab_icon_wode_wode.png",
+                "text" : "个人中心"
             },
             {
                 "pagePath" : "pages/tabBar/API/API",

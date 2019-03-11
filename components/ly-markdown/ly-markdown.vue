@@ -125,7 +125,7 @@
 				} else if (type == "alignleft") {
 					this.textareaDataSync += "\n::: hljs-left\n\n左对齐\n\n:::\n"
 				} else if (type == "aligncenter") {
-					this.textareaDataSync += "\n::: hljs-center\n\n居中对齐\n\n:::\n"
+					this.textareaDataSync += "\n::: hljs-personCenter\n\n居中对齐\n\n:::\n"
 				} else if (type == "alignright") {
 					this.textareaDataSync += "\n::: hljs-right\n\n\n\n右对齐\n\n:::\n"
 				} else if (type == "link") {

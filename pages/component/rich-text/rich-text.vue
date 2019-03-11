@@ -28,14 +28,14 @@
 					name: 'div',
 					attrs: {
 						class: 'div-class',
-						style: 'line-height: 60px; color: red; text-align:center;'
+						style: 'line-height: 60px; color: red; text-align:personCenter;'
 					},
 					children: [{
 						type: 'text',
 						text: 'Hello&nbsp;uni-app!'
 					}]
 				}],
-				strings: '<div style="text-align:center;"><img src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png"/></div>'
+				strings: '<div style="text-align:personCenter;"><img src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png"/></div>'
 			}
 		}
 	}

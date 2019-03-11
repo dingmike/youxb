@@ -57,7 +57,7 @@ block.list = edit(block.list)
   .getRegex();
 
 block._tag = 'address|article|aside|base|basefont|blockquote|body|caption'
-  + '|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption'
+  + '|personCenter|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption'
   + '|figure|footer|form|frame|frameset|h[1-6]|head|header|hr|html|iframe'
   + '|legend|li|link|main|menu|menuitem|meta|nav|noframes|ol|optgroup|option'
   + '|p|param|section|source|summary|table|tbody|td|tfoot|th|thead|title|tr'

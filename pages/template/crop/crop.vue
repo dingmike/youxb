@@ -350,7 +350,7 @@
 		right: 0;
 		bottom: 0;
 		display: block;
-		align-items: center;
+		align-items: personCenter;
 		flex-direction: column; */
 	}
 

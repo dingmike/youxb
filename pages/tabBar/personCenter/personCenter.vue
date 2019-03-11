@@ -1,32 +1,10 @@
 <template>
     <view class="uni-common-pb">
 
-        <view class="page-section swiper">
-            <view class="page-section-spacing">
-                <swiper class="swiper" :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval"
-                        :duration="duration">
-                    <swiper-item>
-                        <view class="swiper-item">
-                            <a href="http://mp.weixin.qq.com/s/-n9bWkyE_oSEpdZELnUFog">
-                                <img style="width: 100%" src="../../../static/banner/banner.png?v=1" alt="">
-                            </a>
-                        </view>
-                    </swiper-item>
-                    <swiper-item>
-                        <view class="swiper-item">
-                            <a href="http://mp.weixin.qq.com/s/-n9bWkyE_oSEpdZELnUFog">
-                                <img style="width: 100%" src="../../../static/banner/banner3.png" alt="">
-                            </a>
-                        </view>
-                    </swiper-item>
-                    <swiper-item>
-                        <view class="swiper-item">
-                            <a href="http://mp.weixin.qq.com/s/-n9bWkyE_oSEpdZELnUFog">
-                                <img style="width: 100%" src="../../../static/banner/banner2.png" alt="">
-                            </a>
-                        </view>
-                    </swiper-item>
-                </swiper>
+        <view class="page-section">
+            <view class="" >
+                <text class="own-relative">{{phone}}</text>
+                <image style=" width:100%;height: 172upx;" mode="scaleToFill" src="../../../static/personCenter/img_touxiang.png"></image>
             </view>
         </view>
 
@@ -43,59 +21,27 @@
             </view>
         </view>
 
-        <view class="uni-card">
-            <view class="uni-grid-9 uni-common-mt own-bg-white">
-                <view class="uni-grid-9-item" hover-class="uni-grid-9-item-hover" v-for="(item,index) in grids" :key="index" :class="index % 3 === 2 ? 'no-border-right' : ''">
-                    <image class="uni-grid-9-image" :src="item.pic"></image>
-                    <text class="uni-grid-9-text own-grid-9-text">{{item.text}}</text>
+
+        <view class="uni-list">
+            <view class="uni-list-cell" hover-class="uni-list-cell-hover">
+                <view class="uni-list-cell-navigate uni-navigate-right">
+                    <image style="width: 40upx; height: 40upx" src="../../../static/personCenter/icon_wode.png"></image>
+                </view>
+            </view>
+            <view class="uni-list-cell uni-list-cell-last" hover-class="uni-list-cell-hover">
+                <view class="uni-list-cell-navigate uni-navigate-right">
+                    Item2
                 </view>
             </view>
         </view>
-
-        <view class="uni-flex uni-row own-bg-white own-card-padding">
-            <view class="uni-flex uni-column" style="width: 50%;">
-                <image src="../../../static/banner/content_banner_shouchong.png" style="width: 324upx;height: 322upx;"></image>
-            </view>
-            <view class="uni-flex uni-column">
-                <view class="uni-flex uni-row">
-                    <image src="../../../static/banner/content_banner_shuaka.png" style="height: 150upx;width:320upx;padding: 0 32upx 20upx 32upx;"></image>
-                </view>
-                <view class="uni-flex uni-row">
-                    <view class="text">
-                        <image src="../../../static/banner/content_banner_butie.png" style="height: 150upx; width: 320upx;padding: 0 32upx 0upx 32upx;"></image>
-                    </view>
-                </view>
-            </view>
-        </view>
-
-
-
-
-        <view class="uni-card" v-for="(list,index) in lists" :key="index">
-            <view class="uni-list">
-                <view class="uni-list-cell uni-collapse">
-                    <view class="uni-list-cell-navigate uni-navigate-bottom" hover-class="uni-list-cell-hover"
-                          :class="list.open ? 'uni-active' : ''"
-                          @click="triggerCollapse(index)">
-                        {{list.name}}
-                    </view>
-                    <view class="uni-list uni-collapse" :class="list.open ? 'uni-active' : ''">
-                        <view class="uni-list-cell" hover-class="uni-list-cell-hover" v-for="(item,key) in list.pages"
-                              :key="key" :url="item.url"
-                              @click="goDetailPage(item.url)">
-                            <view class="uni-list-cell-navigate uni-navigate-right"> {{item.name}}</view>
-                        </view>
-                    </view>
-                </view>
-            </view>
-        </view>
-
-
-
     </view>
 </template>
 <script>
+    import uniIcon from '../../../components/uni-icon.vue'
     export default {
+        components: {
+            uniIcon
+        },
         data() {
             // 暂时这么写，后面看怎么优化。
             let mediaPages = [{
@@ -300,6 +246,8 @@
                 //#endif
             ];
             return {
+                phone:'13325658985',
+                info:"info",
                 lists: list,
                 title: 'swiper',
                 background: ['color1', 'color2', 'color3'],
@@ -307,13 +255,13 @@
                 autoplay: true,
                 interval: 2000,
                 duration: 500,
-                grids:[
-                    {pic: '../../../static/banner/icon_youkachongzhi.png',text: '油卡充值'},
-                    {pic: '../../../static/banner/icon_youhuiquan.png',text: '优惠券'},
-                    {pic: '../../../static/banner/icon_xinyongjiayou.png',text: '信用加油'},
-                    {pic: '../../../static/banner/icon_liantongzhuanxiang.png',text: '联通专享'},
-                    {pic: '../../../static/banner/icon_zaixianshangcheng.png',text: '在线商城'},
-                    {pic: '../../../static/banner/icon_goumaiyouquan.png',text: '无卡加油'}
+                grids: [
+                    {pic: '../../../static/banner/icon_youkachongzhi.png', text: '油卡充值'},
+                    {pic: '../../../static/banner/icon_youhuiquan.png', text: '优惠券'},
+                    {pic: '../../../static/banner/icon_xinyongjiayou.png', text: '信用加油'},
+                    {pic: '../../../static/banner/icon_liantongzhuanxiang.png', text: '联通专享'},
+                    {pic: '../../../static/banner/icon_zaixianshangcheng.png', text: '在线商城'},
+                    {pic: '../../../static/banner/icon_goumaiyouquan.png', text: '无卡加油'}
                 ]
             }
         },
@@ -370,28 +318,48 @@
     .uni-list:before {
         height: 0;
     }
-    .own-card{
-        height: 108upx;
-        padding-top: 8upx;
+
+    .own-card {
+        height: 108 upx;
+        padding-top: 8 upx;
         /* left: 54px; */
         background: #fff;
     }
-    .own-item{
+
+    .own-item {
         width: 50%;
         text-align: center;
     }
-    .own-num{
-        font-size: 32upx ;
+
+    .own-num {
+        font-size: 32 upx;
         font-weight: 800;
     }
-    .own-grid-9-text{
-        line-height: 48upx;
-        font-size: 28upx;
+
+    .own-grid-9-text {
+        line-height: 48 upx;
+        font-size: 28 upx;
     }
-    .own-bg-white{
+
+    .own-bg-white {
         background: #fff;
     }
-    .own-card-padding{
-        padding: 16upx 20px;
+
+    .own-card-padding {
+        padding: 16 upx 20px;
+    }
+    .own-divider{
+        padding: 12upx 16upx;
+    }
+    .own-label-padding{
+        padding: 16upx 16upx;
+    }
+    .own-relative{
+        position: absolute;
+        top: 52upx;
+        left: 192upx;
+        z-index: 400;
+        font-size: 36upx;
+        color: #fff;
     }
 </style>
